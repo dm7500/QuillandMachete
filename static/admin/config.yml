@@ -1,10 +1,10 @@
 backend:
   name: github
-  repo: dm7500/QuillandMachete
-  branch: main # Branch to update (optional; defaults to master)
-  site_domain: https://quillandmachete.com
-  base_url: https://quillandmachete.com
+  repo: dm7500/quillandmachete
+  branch: main
+  base_url: https://quillandmachete.com  # your actual domain
   auth_endpoint: /api/auth
+
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 
