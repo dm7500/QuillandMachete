@@ -1,63 +1,22 @@
 backend:
   name: github
-  repo: dm7500/quillandmachete
-  branch: main
-
-media_folder: "static/images/uploads"
-public_folder: "/images/uploads"
-
+  repo: username/repo
+  branch: main # Branch to update (optional; defaults to master)
+  site_domain: https://example.com
+  base_url: https://example.com
+  auth_endpoint: /api/auth
+media_folder: static/img
+public_folder: /img
 collections:
-  - name: "martis-ghost"
-    label: "Martí’s Ghost"
-    folder: "content/martis-ghost"
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'content/blog'
     create: true
-    slug: "{{slug}}"
+    slug: '{{slug}}'
+    editor:
+      preview: false
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Tags", name: "tags", widget: "list", default: [] }
-      - { label: "Body", name: "body", widget: "markdown" }
-
-  - name: "balsas-y-boletos"
-    label: "Balsas y Boletos"
-    folder: "content/balsas-y-boletos"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Tags", name: "tags", widget: "list", default: [] }
-      - { label: "Body", name: "body", widget: "markdown" }
-
-  - name: "the-fragile-mind"
-    label: "The Fragile Mind"
-    folder: "content/the-fragile-mind"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Tags", name: "tags", widget: "list", default: [] }
-      - { label: "Body", name: "body", widget: "markdown" }
-
-  - name: "authoritarian-echoes"
-    label: "Authoritarian Echoes"
-    folder: "content/authoritarian-echoes"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Tags", name: "tags", widget: "list", default: [] }
-      - { label: "Body", name: "body", widget: "markdown" }
-
-  - name: "letters-to-my-father"
-    label: "Letters to My Father"
-    folder: "content/letters-to-my-father"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Tags", name: "tags", widget: "list", default: [] }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
