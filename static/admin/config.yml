@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: yourusername/quillandmachete
+  repo: dm7500/quillandmachete
   branch: main
 
 media_folder: "static/images/uploads"
