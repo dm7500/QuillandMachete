@@ -1,0 +1,29 @@
+{{ define "main" }}
+  <section class="hero">
+    <h1>Quill & Machete</h1>
+    <p>Essays on exile, empire, masculinity, and myth.</p>
+  </section>
+
+  <section class="sections">
+    <h2>Explore by Section</h2>
+    <ul>
+      <li><a href="/martis-ghost/">Martí’s Ghost</a></li>
+      <li><a href="/balsas-y-boletos/">Balsas y Boletos</a></li>
+      <li><a href="/the-fragile-mind/">The Fragile Mind</a></li>
+      <li><a href="/authoritarian-echoes/">Authoritarian Echoes</a></li>
+      <li><a href="/letters-to-my-father/">Letters to My Father</a></li>
+    </ul>
+  </section>
+
+  <section class="latest">
+    <h2>Latest Posts</h2>
+    <ul>
+      {{ range first 5 (where .Site.RegularPages "Type" "!=" "page") }}
+        <li>
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          <small>{{ .Date.Format "Jan 2, 2006" }}</small>
+        </li>
+      {{ end }}
+    </ul>
+  </section>
+{{ end }}
