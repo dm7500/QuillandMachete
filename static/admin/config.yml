@@ -1,22 +1,65 @@
 backend:
   name: github
-  repo: username/repo
+  repo: dm7500/QuillandMachete
   branch: main # Branch to update (optional; defaults to master)
-  site_domain: https://example.com
-  base_url: https://example.com
+  site_domain: https://quillandmachete.com
+  base_url: https://quillandmachete.com
   auth_endpoint: /api/auth
-media_folder: static/img
-public_folder: /img
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+
 collections:
-  - name: 'blog'
-    label: 'Blog'
-    folder: 'content/blog'
+  - name: "martis-ghost"
+    label: "Martí’s Ghost"
+    folder: "content/martis-ghost"
     create: true
-    slug: '{{slug}}'
-    editor:
-      preview: false
+    slug: "{{slug}}"
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Tags", name: "tags", widget: "list", default: [] }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "balsas-y-boletos"
+    label: "Balsas y Boletos"
+    folder: "content/balsas-y-boletos"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Tags", name: "tags", widget: "list", default: [] }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "the-fragile-mind"
+    label: "The Fragile Mind"
+    folder: "content/the-fragile-mind"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Tags", name: "tags", widget: "list", default: [] }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "authoritarian-echoes"
+    label: "Authoritarian Echoes"
+    folder: "content/authoritarian-echoes"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Tags", name: "tags", widget: "list", default: [] }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "letters-to-my-father"
+    label: "Letters to My Father"
+    folder: "content/letters-to-my-father"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Tags", name: "tags", widget: "list", default: [] }
+      - { label: "Body", name: "body", widget: "markdown" }
