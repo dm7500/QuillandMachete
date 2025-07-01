@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: dm7500/quillandmachete
+  repo: dm7500/QuillandMachete
   branch: main
   base_url: https://quillandmachete.com  # your actual domain
   auth_endpoint: /api/auth
